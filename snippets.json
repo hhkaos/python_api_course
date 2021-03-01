@@ -1,0 +1,76 @@
+{
+  "snippets" : [
+      {
+        "name": "NumPy",
+        "code": [
+          "import numpy as np # np is the name given by convention",
+          "arr = [1, 2, 3, 4, 5] # array normally defined in python (list)",
+          "numArr = np.array(arr) # array converted to numpy",
+          "numArr.dtype # Arrays are always typed in NumPy",
+          "numArrFloat = np.array(arr, dtype='int8') # int8 -> Byte (-128 to 127)",
+          "numArrFloat",
+          "numArrFloat.dtype",
+          "np.arange(1, 6) # creates an interval"
+        ]
+      },{
+        "name": "Pandas (Series & DataFrames)",
+        "code": [
+          "import pandas as pd", 
+          "import numpy as np", 
+          "data = pd.read_csv(\"https://opendata.pamplona.es/abrirFichero.aspx?idFichero=259&idFormato=6&idioma=1\", encoding=\"cp1252\", delimiter=\";\")",
+          "# week = np.array(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])", 
+          "# serie = pd.Series(week) # Creating a Panda Serie from a NumPy darray", 
+          "# weekend = pd.Series(['Saturday', 'Sunday'], index=['a', 0]) # Naming indexes", 
+          "# dates = pd.date_range('1/1/2021', '1/31/2021', freq='D') # Creating a time Serie", 
+          "# data = [['Spain', 'Spanish', 47], ['England', 'English', 56], ['Scotland', 'Scottish', 5]]", 
+          "# df = pd.DataFrame(data, columns = ['Country', 'Adjective', 'Population']) # Creating a DataFrame from a Python list", 
+          "# df = pd.DataFrame(data, columns = ['Country', 'Adjective', 'Population'], index = ['C. 1', 'C. 2', 'C. 3'])", 
+          "# s1 = pd.Series(['a', 'b', 'c'])", 
+          "# s2 = pd.Series(['d'])", 
+          "# data = {'column1': s1, 'column2': s2}", 
+          "# df = pd.DataFrame(data)", 
+          "# del df['column2']", 
+          "# df.iloc[1]", 
+          "# df.iloc[[0,1], [0]]", 
+          "# df.head()", 
+          "# df.loc['country1']"
+        ]
+      },{
+        "name": "MatPlotLib",
+        "code": [
+          "%matplotlib inline",
+          "df.plot()",
+          "municipalities.plot(x='Municipio', y='Poblacion', kind='bar', figsize=(15,7))",
+          "# ax.set_xticks(data2010.index)",
+          "# ax.set_xticklabels(data2010.NACIONALIDAD, rotation=90)",
+          "# ax.set_xlabel('Origin country')",
+          "# ax.set_ylabel('Nationalities')"
+        ]
+      },{
+        "name": "ArcGIS content search",
+        "code": [
+          "gis.content.search('string owner:' + gis.users.me.username, item_type=\"Feature Service\", max_items=10)"
+        ]
+      },{
+        "name": "Create profile",
+        "code": [
+          "GIS(url=\"https://yourorg.maps.arcgis.com\", username='...', password='...', profile='profilename')"
+        ]
+      },
+      {
+        "name": "Parse JSON",
+        "code": [
+          "import json",
+          "obj = json.loads(response.text)",
+          "mystr = json.dump(obj)"
+        ]
+      },
+      {
+        "name": "Get notebook path",
+        "code": [
+          "import os",
+          "os.getcwd()"
+        ]
+      }
+  ]
+}
