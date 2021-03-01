@@ -39,12 +39,14 @@
         "name": "MatPlotLib",
         "code": [
           "%matplotlib inline",
+          "# import matplotlib.pyplot as plt",
           "df.plot()",
           "municipalities.plot(x='Municipio', y='Poblacion', kind='bar', figsize=(15,7))",
           "# ax.set_xticks(data2010.index)",
           "# ax.set_xticklabels(data2010.NACIONALIDAD, rotation=90)",
           "# ax.set_xlabel('Origin country')",
-          "# ax.set_ylabel('Nationalities')"
+          "# ax.set_ylabel('Nationalities')",
+          "# plt.show()"
         ]
       },{
         "name": "ArcGIS content search",
