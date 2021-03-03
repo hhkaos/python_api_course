@@ -82,6 +82,30 @@
           "import os",
           "os.getcwd()"
         ]
+      },{
+          "name": "Qgrid (Interactive DataFrame)",
+          "code": [
+            "import qgrid",
+            "widget = qgrid.show_grid(df, show_toolbar = True)",
+            "widget"
+          ]
+      },{
+        "name": "ArcGIS API - GIS(profile)",
+        "code": [
+          "from arcgis.gis import GIS",
+          "gis = GIS(profile=\"geogeeks\")"
+        ]
+      },{
+        "name": "ArcGIS API - Feature Layer Item to Spatial DataFrame",
+        "code": [
+          "from arcgis.features import GeoAccessor, FeatureLayer",
+          "sdf = GeoAccessor.from_layer(FeatureLayer(chennai_rainfaill.layers[0].url))",
+          "sdf",
+          "#import pandas as pd",
+          "#fl = gis.content.get(\"f26dc0014b354edeadbc134cc842e9c2\").layers[0]",
+          "#sdf = pd.DataFrame.spatial.from_layer(fl)",
+          "#sdf.head()"
+        ]
       }
   ]
 }
