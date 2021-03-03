@@ -49,11 +49,20 @@
           "# plt.show()"
         ]
       },{
-        "name": "ArcGIS content search",
+        "name": "ArcGIS PAPI - Content search",
         "code": [
           "gis.content.search('string owner:' + gis.users.me.username, item_type=\"Feature Service\", max_items=10)"
         ]
       },{
+        "name": "ArcGIS PAPI Build Data Frames from Feature Layers ",
+        "code": [
+          "fl = FeatureLayer('<layer_url>')",
+          "# gis.content.search('string ', item_type=\"Feature Service\")[0]",
+          "df = GeoAccessor.from_layer(fl)",
+          "display(df.head())"
+        ]
+      }
+      ,{
         "name": "Create profile",
         "code": [
           "GIS(url=\"https://yourorg.maps.arcgis.com\", username='...', password='...', profile='profilename')"
